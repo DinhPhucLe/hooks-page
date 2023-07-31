@@ -1,11 +1,7 @@
 import './App.css';
 import React from "react";
-import { useState } from "react";
-import { Outlet, Link } from "react-router-dom";
 
-function Cmp({text}) {return <span style={{color: "#4EC9B0"}}>{text}</span>}
 
-function Comment({text}) {return <div style={{color: "#6A9955"}}>{text}</div>}
 
 function DBlue({text}) {return <span style={{color: "#569CD6"}}>{text}</span>}
 

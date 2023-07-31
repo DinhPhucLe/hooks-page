@@ -1,11 +1,7 @@
 import './App.css';
 import React from "react";
-import { useState } from "react";
-import { Outlet, Link } from "react-router-dom";
 
 function Cmp({text}) {return <span style={{color: "#4EC9B0"}}>{text}</span>}
-
-function Comment({text}) {return <div style={{color: "#6A9955"}}>{text}</div>}
 
 function DBlue(props) {return <span style={{color: "#569CD6"}}>{props.text}</span>}
 
@@ -17,23 +13,17 @@ function DYellow(props) {return <span style={{color: "yellow"}}>{props.text}</sp
 
 function LYellow(props) {return <span style={{color: "#DCDCAA"}}>{props.text}</span>}
 
-function LGreen(props) {return <span style={{color: "#B5CEA8"}}>{props.text}</span>}
-
 function White(props){return <span style={{color: "white"}}>{props.text}</span>}
 
 function Grey(props){return <span style={{color: "#808080"}}>{props.text}</span>}
 
 function TextColor(props){return <span style={{color: "#CE9178"}}>"{props.text}"</span>}
 
-const displayVar = "{var}";
 const displayDiv = <span><Grey text="<"/><DBlue text="div"/><Grey text=">"/></span>;
 const displayDivClose = <span><Grey text="<"/><DBlue text="/div"/><Grey text=">"/></span>;
-const opCB = "{";
-const edCB = "}";
 const opCBracket = <DYellow text="{"/>;
 const closeCBracket = <DYellow text="}"/>;
 const op = <Grey text="<"/>,   ed = <Grey text=">"/>;
-const colon = ":";
 
 function UseContextHook(){
 

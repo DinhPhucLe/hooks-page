@@ -1,7 +1,5 @@
 import './App.css';
 import React from "react";
-import { useState } from "react";
-import { Outlet, Link } from "react-router-dom";
 
 function Comment(props) {return <div style={{color: "#6A9955"}}>{props.text}</div>}
 
@@ -23,7 +21,6 @@ function Grey(props){return <span style={{color: "#808080"}}>{props.text}</span>
 
 function TextColor(props){return <span style={{color: "#CE9178"}}>"{props.text}"</span>}
 
-const displayVar = "{var}";
 const displayDiv = <span><Grey text="<"/><DBlue text="div"/><Grey text=">"/></span>;
 const displayDivClose = <span><Grey text="<"/><DBlue text="/div"/><Grey text=">"/></span>;
 const opCB = "{";

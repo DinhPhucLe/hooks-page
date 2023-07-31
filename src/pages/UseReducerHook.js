@@ -1,7 +1,5 @@
 import './App.css';
 import React from "react";
-import { useState } from "react";
-import { Outlet, Link } from "react-router-dom";
 
 function Cmp({text}) {return <span style={{color: "#4EC9B0"}}>{text}</span>}
 
@@ -25,15 +23,11 @@ function Grey({text}){return <span style={{color: "#808080"}}>{text}</span>}
 
 function TextColor({text}){return <span style={{color: "#CE9178"}}>"{text}"</span>}
 
-const displayVar = "{var}";
 const displayDiv = <span><Grey text="<"/><DBlue text="div"/><Grey text=">"/></span>;
 const displayDivClose = <span><Grey text="<"/><DBlue text="/div"/><Grey text=">"/></span>;
-const opCB = "{";
-const edCB = "}";
 const opCBracket = <DYellow text="{"/>;
 const closeCBracket = <DYellow text="}"/>;
 const op = <Grey text="<"/>,   ed = <Grey text=">"/>;
-const colon = ":";
 
 function UseReducerHook(){
 
