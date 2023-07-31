@@ -7,9 +7,9 @@ function Layout(){
 
   return(
     <>
-      <div style={{display: "flex", width: "1000px"}}>
+      <div style={{display: "flex"}}>
         <div style={{paddingLeft: "50px", paddingTop: "225px", width: "100px", borderRight: "1px solid grey",
-                    paddingRight: "30px", height: "auto", backgroundColor: "#333333", position: "relative"}}>
+                    paddingRight: "30px", height: "1000px", backgroundColor: "#333333", position: "fixed"}}>
           <p style={{fontSize: "20px", color: "white"}}> Hooks:</p>
 
           <div style={{marginBottom: "10px"}}>
@@ -33,7 +33,8 @@ function Layout(){
           </div>
 
           <div style={{marginBottom: "10px"}}>
-            <Link to = "/CallbackMemo" className='customLink'> useCallback & useMemo </Link>
+            <Link to = "/CallbackMemo" className='customLink'>
+              useCallback & useMemo </Link>
           </div>
         </div>
         

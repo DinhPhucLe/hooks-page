@@ -34,7 +34,7 @@ function UseRefHook(){
 
   return(
     <>
-    <div style={{width: 1351}}>
+    <div style={{width: 1351, marginLeft: "165px"}}>
         <div>
             <p style={{backgroundColor: "lightgoldenrodyellow", fontSize: "50px",
                 height: "175px", display:"flex", alignItems: "center", width: 1183,

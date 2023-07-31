@@ -35,7 +35,7 @@ function CallbackMemo(){
 
   return(
     <>
-    <div style={{width: 1351}}>
+    <div style={{width: 1351, marginLeft: "165px"}}>
         <div style={{backgroundColor: "lightgoldenrodyellow", fontSize: "50px",
             height: "175px", display:"flex", alignItems: "center", width: 1183, flexDirection: "row",
             justifyContent: "center", borderBottom: "2px solid lightgrey", marginTop: "0px"}}>
