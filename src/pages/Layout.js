@@ -1,9 +1,32 @@
 import './App.css';
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
+import { useRef } from "react";
+
 
 
 function Layout(){
+  const state = useRef();
+  const effect = useRef();
+  const rf = useRef();
+  const rdcr = useRef();
+  const contxt = useRef();
+  const cbmemo = useRef();
+
+  function changeColor(cur){
+    state.current.setAttribute('class', 'customLink');
+    effect.current.setAttribute('class', 'customLink');
+    rf.current.setAttribute('class', 'customLink');
+    rdcr.current.setAttribute('class', 'customLink');
+    contxt.current.setAttribute('class', 'customLink');
+    cbmemo.current.setAttribute('class', 'customLink');
+
+    cur.current.setAttribute('class', 'test');
+    return (
+      <>
+      </>
+    );
+  }
 
   return(
     <>
@@ -13,27 +36,33 @@ function Layout(){
           <p style={{fontSize: "20px", color: "white"}}> Hooks:</p>
 
           <div style={{marginBottom: "10px"}}>
-            <Link to = "/UseStateHook" className='customLink'> useState </Link>
+            <Link to = "/UseStateHook" className='test' 
+              ref={state} onClick={() => changeColor(state)}> useState </Link>
           </div>
 
           <div style={{marginBottom: "10px"}}>
-            <Link to = "/UseEffectHook" className='customLink'> useEffect </Link>
+            <Link to = "/UseEffectHook" className='customLink'
+              ref={effect} onClick={() => changeColor(effect)}> useEffect </Link>
           </div>
 
           <div style={{marginBottom: "10px"}}>
-            <Link to = "/UseRefHook" className='customLink'> useRef </Link>
+            <Link to = "/UseRefHook" className='customLink'
+              ref={rf} onClick={() => changeColor(rf)}> useRef </Link>
           </div>
 
           <div style={{marginBottom: "10px"}}>
-            <Link to = "/UseContextHook" className='customLink'> useContext </Link>
+            <Link to = "/UseContextHook" className='customLink'
+              ref={contxt} onClick={() => changeColor(contxt)}> useContext </Link>
           </div>
 
           <div style={{marginBottom: "10px"}}>
-            <Link to = "/UseReducerHook" className='customLink'> useReducer </Link>
+            <Link to = "/UseReducerHook" className='customLink'
+              ref={rdcr} onClick={() => changeColor(rdcr)}> useReducer </Link>
           </div>
 
           <div style={{marginBottom: "10px"}}>
-            <Link to = "/CallbackMemo" className='customLink'>
+            <Link to = "/CallbackMemo" className='customLink'
+              ref={cbmemo} onClick={() => changeColor(cbmemo)}>
               useCallback & useMemo </Link>
           </div>
         </div>
