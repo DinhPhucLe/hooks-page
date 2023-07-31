@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter, Routes, Route, Link, Outlet } from 'react-router-dom';
+import UseStateHook from "./pages/UseStateHook.js";
+import UseEffectHook from "./pages/UseEffectHook.js";
+import UseRefHook from "./pages/UseRefHook.js";
+import UseContextHook from './pages/UseContextHook.js';
+import Layout from "./pages/Layout.js";
 import './App.css';
+import UseReducerHook from './pages/UseReducerHook.js';
+import CallbackMemo from './pages/CallbackMemo.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+function App(){
+
+  return(
+    <>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<UseStateHook />}/>
+          <Route path="UseStateHook" element={<UseStateHook />}/>
+          <Route path="UseEffectHook" element={<UseEffectHook />}/>
+          <Route path="UseRefHook" element={<UseRefHook />}/>
+          <Route path="UseContextHook" element={<UseContextHook />}/>
+          <Route path="UseReducerHook" element={<UseReducerHook />}/>
+          <Route path="CallbackMemo" element={<CallbackMemo />}/>
+        </Route>
+      </Routes>
+    </BrowserRouter>
+
+    <Outlet/>
+    </>
   );
 }
 

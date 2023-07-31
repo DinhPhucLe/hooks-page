@@ -1,13 +1,21 @@
-.content-box{
+.content-box {
   border: 1px solid grey;
   width: fit-content;
   padding: 20px;
   border-radius: 5px;
   margin: 15px;
+  background-color: #1F1F1F;
 }
 
-.useStateColor{
+.keyColor {
   color: #ff4d4d;
   background-color: #e6e6e6;
   align-content: center;
+  width: fit-content;
+}
+
+.customLink {
+  text-decoration: none;
+  color: grey;
+  font-size: 17px;
 }
