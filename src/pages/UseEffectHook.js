@@ -1,23 +1,6 @@
 import './App.css';
 import React from "react";
-
-function Comment(props) {return <div style={{color: "#6A9955"}}>{props.text}</div>}
-
-function DBlue(props) {return <span style={{color: "#569CD6"}}>{props.text}</span>}
-
-function MBlue(props) {return <span style={{color: "#4FC1FF"}}>{props.text}</span>}
-
-function Purple(props) {return <span style={{color: "#990073"}}>{props.text}</span>}
-
-function DYellow(props) {return <span style={{color: "yellow"}}>{props.text}</span>}
-
-function LYellow(props) {return <span style={{color: "#DCDCAA"}}>{props.text}</span>}
-
-function LGreen(props) {return <span style={{color: "#B5CEA8"}}>{props.text}</span>}
-
-function White(props){return <span style={{color: "white"}}>{props.text}</span>}
-
-function Grey(props){return <span style={{color: "#808080"}}>{props.text}</span>}
+import { Comment, DBlue, MBlue, Purple, DYellow, LYellow, LGreen, White } from "./coloring-components/ColoringComponents"
 
 const opCBracket = <DYellow text="{"/>;
 const closeCBracket = <DYellow text="}"/>;

@@ -1,25 +1,6 @@
 import './App.css';
 import React from "react";
-
-
-
-function DBlue({text}) {return <span style={{color: "#569CD6"}}>{text}</span>}
-
-function MBlue({text}) {return <span style={{color: "#4FC1FF"}}>{text}</span>}
-
-function Purple({text}) {return <span style={{color: "#990073"}}>{text}</span>}
-
-function DYellow({text}) {return <span style={{color: "yellow"}}>{text}</span>}
-
-function LYellow({text}) {return <span style={{color: "#DCDCAA"}}>{text}</span>}
-
-function LGreen({text}) {return <span style={{color: "#B5CEA8"}}>{text}</span>}
-
-function White({text}){return <span style={{color: "white"}}>{text}</span>}
-
-function Grey({text}){return <span style={{color: "#808080"}}>{text}</span>}
-
-function TextColor({text}){return <span style={{color: "#CE9178"}}>"{text}"</span>}
+import { DBlue, MBlue, Purple, DYellow, LYellow, LGreen, White, Grey, TextColor } from "./coloring-components/ColoringComponents"
 
 const displayVar = "{var}";
 const displayDiv = <span><Grey text="<"/><DBlue text="div"/><Grey text=">"/></span>;

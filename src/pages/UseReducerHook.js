@@ -1,27 +1,6 @@
 import './App.css';
 import React from "react";
-
-function Cmp({text}) {return <span style={{color: "#4EC9B0"}}>{text}</span>}
-
-function Comment({text}) {return <div style={{color: "#6A9955"}}>{text}</div>}
-
-function DBlue({text}) {return <span style={{color: "#569CD6"}}>{text}</span>}
-
-function MBlue({text}) {return <span style={{color: "#4FC1FF"}}>{text}</span>}
-
-function Purple({text}) {return <span style={{color: "#990073"}}>{text}</span>}
-
-function DYellow({text}) {return <span style={{color: "yellow"}}>{text}</span>}
-
-function LYellow({text}) {return <span style={{color: "#DCDCAA"}}>{text}</span>}
-
-function LGreen({text}) {return <span style={{color: "#B5CEA8"}}>{text}</span>}
-
-function White({text}){return <span style={{color: "white"}}>{text}</span>}
-
-function Grey({text}){return <span style={{color: "#808080"}}>{text}</span>}
-
-function TextColor({text}){return <span style={{color: "#CE9178"}}>"{text}"</span>}
+import { Cmp, Comment, DBlue, MBlue, Purple, DYellow, LYellow, LGreen, White, Grey, TextColor } from "./coloring-components/ColoringComponents"
 
 const displayDiv = <span><Grey text="<"/><DBlue text="div"/><Grey text=">"/></span>;
 const displayDivClose = <span><Grey text="<"/><DBlue text="/div"/><Grey text=">"/></span>;
