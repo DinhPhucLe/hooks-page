@@ -13,7 +13,7 @@ function UseStateHook(){
   return(
     <>
     <div style={{width: 1351, marginLeft: "165px"}}>
-      <PageTitle title="useStateState"/>
+      <PageTitle title="useState"/>
       <div>
 
 
