@@ -1,6 +1,7 @@
 import './App.css';
 import React from "react";
-import { DBlue, MBlue, Purple, DYellow, LYellow, LGreen, White, Grey, TextColor } from "./coloring-components/ColoringComponents"
+import { DBlue, MBlue, Purple, DYellow, LYellow, LGreen, White, Grey, TextColor } from "./additionalComponents/ColoringComponents"
+import { PageTitle } from "./additionalComponents/HeadTitle"
 
 const displayVar = "{var}";
 const displayDiv = <span><Grey text="<"/><DBlue text="div"/><Grey text=">"/></span>;
@@ -17,13 +18,7 @@ function CallbackMemo(){
   return(
     <>
     <div style={{width: 1351, marginLeft: "165px"}}>
-        <div style={{backgroundColor: "lightgoldenrodyellow", fontSize: "50px",
-            height: "175px", display:"flex", alignItems: "center", width: 1183, flexDirection: "row",
-            justifyContent: "center", borderBottom: "2px solid lightgrey", marginTop: "0px"}}>
-            <p><span style={{color: "#ff4d4d"}}>useCallback & useMemo</span> Guide</p>
-        </div>
-
-
+        <PageTitle title="useCallback & useMemo"/>
 
         <div>
 
@@ -79,15 +74,7 @@ function CallbackMemo(){
 
                     <div><DBlue text="const"/> <MBlue text="calculation"/> <White text="="/> <LYellow text="useMemo"/><DYellow text="("/><Purple text="()"/> <MBlue text="=>"/> <LYellow text="expensiveCalculation"/><Purple text="("/><MBlue text="count"/><Purple text=")"/><White text=","/> <Purple text="["/><MBlue text="count"/><Purple text="]"/><DYellow text=")"/><White text=";"/></div>
                 </div>
-                <p>The <span className='keyColor'>expensiveCalculation</span> will only recalculate when count changes.</p>
-
-                
-                
-
-
-
-
-                
+                <p>The <span className='keyColor'>expensiveCalculation</span> will only recalculate when count changes.</p>                
             </div>
         </div>
     </div>

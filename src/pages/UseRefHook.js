@@ -1,6 +1,7 @@
 import './App.css';
 import React from "react";
-import { Comment, DBlue, MBlue, Purple, DYellow, LYellow, LGreen, White, Grey, TextColor } from "./coloring-components/ColoringComponents"
+import { Comment, DBlue, MBlue, Purple, DYellow, LYellow, LGreen, White, Grey, TextColor } from "./additionalComponents/ColoringComponents"
+import { PageTitle } from "./additionalComponents/HeadTitle"
 
 const displayDiv = <span><Grey text="<"/><DBlue text="div"/><Grey text=">"/></span>;
 const displayDivClose = <span><Grey text="<"/><DBlue text="/div"/><Grey text=">"/></span>;
@@ -16,14 +17,7 @@ function UseRefHook(){
   return(
     <>
     <div style={{width: 1351, marginLeft: "165px"}}>
-        <div>
-            <p style={{backgroundColor: "lightgoldenrodyellow", fontSize: "50px",
-                height: "175px", display:"flex", alignItems: "center", width: 1183,
-                justifyContent: "center", borderBottom: "2px solid lightgrey", marginTop: "0px"}}>
-            <span style={{color: "#ff4d4d"}}>useRef&nbsp;</span> Guide</p>
-        </div>
-
-
+        <PageTitle title="useRef"/>
 
         <div>
 
