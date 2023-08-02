@@ -1,0 +1,35 @@
+.sign-in-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(to bottom right, blue, darkviolet, #ff637d); 
+}
+
+.signInBox {
+    border: 3px solid darkslategrey;
+    padding: 30px;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05) inset, 0px 0px 15px white;
+
+}
+
+.inputStyle {
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 15px;
+    border: 2px darkslategrey solid;
+    margin-bottom: 10px;
+}
+
+.logInButton {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    border: 2px darkslategrey solid;
+    margin-left: 150px;
+}
