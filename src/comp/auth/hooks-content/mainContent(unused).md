@@ -12,8 +12,6 @@ import './App.css';
 
 
 function MainContent(){
-  const navigate = useNavigate();
-  const changeToContent = () => navigate("/mainContent");
 
   return(
     <>

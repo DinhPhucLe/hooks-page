@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Link, Outlet } from 'react-router-dom';
 import './App.css';
 import SignIn from './comp/auth/signIn.js';
 import SignUp from "./comp/auth/signUp.js";
-import MainContent from './comp/auth/hooks-content/mainContent.js';
+import SignInPhoneNumber from './comp/auth/signInPhoneNumber';
 import AuthDetails from './comp/authDetails';
 import Layout from './comp/auth/hooks-content/pages/Layout';
 
@@ -14,6 +14,10 @@ import UseContextHook from './comp/auth/hooks-content/pages/UseContextHook.js';
 import UseReducerHook from './comp/auth/hooks-content/pages/UseReducerHook.js';
 import CallbackMemo from './comp/auth/hooks-content/pages/CallbackMemo.js';
 
+import firebase from "firebase/compat/app";
+import "firebase/firestore";
+import { collection, addDoc, doc, getDocs } from "firebase/firestore"
+import { db } from "./firebase";
 
 function App(){
 
@@ -24,6 +28,7 @@ function App(){
           <Route exact path="/" element={<SignIn />}/>
 
           <Route path="/signUp" element = {<SignUp/>}/>
+          <Route path="/signInPhoneNumber" element = {<SignInPhoneNumber />}/>
           <Route path="/mainContent" element = {<Layout/>}>
             
               <Route index element={<UseStateHook />}/>

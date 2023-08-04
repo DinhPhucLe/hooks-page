@@ -1,45 +1,51 @@
-import { React, useEffect, useState } from "react"
+import { React, useEffect, useState, useRef } from "react"
 import { onAuthStateChanged, signOut, updateProfile, updateEmail } from "firebase/auth";
 import { Navigate, Route, useNavigate } from "react-router-dom"
 import { auth } from "../firebase";
-import MainContent from "./auth/hooks-content/mainContent";
+import { collection, addDoc, setDoc, doc, getDocs } from "firebase/firestore";
+import { db } from "../firebase";
 
 const AuthDetails = () => {
-    updateProfile(auth.currentUser, {
-        displayName: "user's name",
-        photoURL: "user's photo"
-    }).catch((error) => {})
-    /*const [authUser, setAuthUser] = useState(null);
-
-    useEffect(() => {
-        const listen = onAuthStateChanged(auth, (user) => {
-            if (user) {
-                setAuthUser(user);
-            } else {
-                setAuthUser(null);
-            }
-        });
-        
-        return () => {
-            listen();
-        }   
-    }, []);*/
-
     const navigate = useNavigate();
     const changeToHome = () => navigate("/");    
+    //const [userShortenMail, setUserShortenMail] = useState("");
+    let userShortenMail = "";
+    const [test, setTest] = useState("");
 
     const signOutAccount = () => {
         signOut(auth);
         changeToHome();
     }
 
-
-    let userShortenMail="";
-    if (auth.currentUser !== null){
+    //console.log(auth.currentUser);
+    if (auth.currentUser !== null && auth.currentUser.email !== null){
         userShortenMail = auth.currentUser.email;
         userShortenMail = userShortenMail.replace("@gmail.com", "");
     }
-    console.log(userShortenMail);
+    
+    if (auth.currentUser !== null && auth.currentUser.phoneNumber !== null){
+        const check = auth.currentUser.phoneNumber;
+        getDocs(collection(db, "userInformation"))
+            .then((snapshot) => {
+                let tmp="";
+                snapshot.docs.forEach((doc) => {
+                    if (doc.data().phone == check){
+                        tmp = doc.data().mail;
+                        tmp = tmp.replace("@gmail.com", "");
+                        //setUserShortenMail(tmp);
+                        userShortenMail = tmp;
+                    }
+                })
+                setTest(tmp);
+                console.log(userShortenMail);
+                
+            })
+            .catch((error) => {
+                alert("number not found");
+                navigate(-1);
+            })
+        userShortenMail = test;
+    }
 
     return(
         <div style={{width: "125px", marginLeft: "-25px", marginTop: "-200px", marginBottom: "200px"}}>

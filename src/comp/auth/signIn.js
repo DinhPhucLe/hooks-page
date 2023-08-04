@@ -1,10 +1,12 @@
 import {React, useState} from "react";
 import {auth} from "../../firebase";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import MainContent from "./hooks-content/mainContent";
+import { 
+    signInWithEmailAndPassword, signInWithPhoneNumber
+} from "firebase/auth";
 import "./customizeSignIn.css";
 import { useNavigate, Link } from "react-router-dom";
-import "./signUp"
+import "./signUp";
+import "./signInPhoneNumber";
 
 const SignIn = () => {
     const [email, setEmail] = useState("");
@@ -29,6 +31,8 @@ const SignIn = () => {
                 setFalseInfo(true);
             })
     }
+
+    
 
     return (
         <div>
@@ -63,7 +67,11 @@ const SignIn = () => {
                     }   
                     
                     <div 
-                        style={{marginLeft: "100px", marginTop: "10px", fontSize: "14px"}}>
+                        style={{marginLeft: "0px", marginTop: "10px", fontSize: "14px"}}>
+                        <Link to="/signInPhoneNumber">Sign in with phone number</Link>
+                    </div>
+                    <div 
+                        style={{marginLeft: "0px", marginTop: "10px", fontSize: "14px"}}>
                         <Link to="/signUp">Create new account</Link>
                     </div>
                 </div>
